@@ -60,10 +60,16 @@
             </div>
         </div>
 
-        <div class="col-12 xl:col-10">
+        <div class="col-12 xl:col-8">
             <div class="card">
                 <h5>Linear Chart</h5>
                 <p-chart type="line" [data]="lineData" [options]="lineOptions"></p-chart>
+            </div>
+        </div>
+        <div class="col-12 xl:col-4">
+            <div class="card">
+                <h5 class="text-left w-full">Radar Chart</h5>
+            <p-chart type="radar" [data]="radarData" [options]="radarOptions"></p-chart>
             </div>
         </div>
 

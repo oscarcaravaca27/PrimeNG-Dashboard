@@ -24,6 +24,10 @@ export class DashboardComponent implements OnInit, OnDestroy {
 
     lineOptions: any;
 
+    radarOptions: any;
+
+    radarData: any;
+
     constructor(private productService: ProductService, public layoutService: LayoutService) {
         this.subscription = this.layoutService.configUpdate$.subscribe(() => {
             this.initChart();
@@ -46,6 +50,47 @@ export class DashboardComponent implements OnInit, OnDestroy {
         const textColorSecondary = documentStyle.getPropertyValue('--text-color-secondary');
         const surfaceBorder = documentStyle.getPropertyValue('--surface-border');
 
+        this.radarData = {
+            labels: ['Comiendo', 'Bebiendo', 'Durmiendo', 'Diseñando', 'Coding', 'Ciclismo', 'Corriendo'],
+            datasets: [
+                {
+                    label: 'Mi Primer dataset',
+                    borderColor: documentStyle.getPropertyValue('--indigo-400'),
+                    pointBackgroundColor: documentStyle.getPropertyValue('--indigo-400'),
+                    pointBorderColor: documentStyle.getPropertyValue('--indigo-400'),
+                    pointHoverBackgroundColor: textColor,
+                    pointHoverBorderColor: documentStyle.getPropertyValue('--indigo-400'),
+                    data: [65, 59, 90, 81, 56, 55, 40]
+                },
+                {
+                    label: 'Mi Segundo dataset',
+                    borderColor: documentStyle.getPropertyValue('--purple-400'),
+                    pointBackgroundColor: documentStyle.getPropertyValue('--purple-400'),
+                    pointBorderColor: documentStyle.getPropertyValue('--purple-400'),
+                    pointHoverBackgroundColor: textColor,
+                    pointHoverBorderColor: documentStyle.getPropertyValue('--purple-400'),
+                    data: [28, 48, 40, 19, 96, 27, 100]
+                }
+            ]
+        };
+
+        this.radarOptions = {
+            plugins: {
+                legend: {
+                    labels: {
+                        fontColor: textColor
+                    }
+                }
+            },
+            scales: {
+                r: {
+                    grid: {
+                        color: textColorSecondary
+                    }
+                }
+            }
+        };
+        
         this.chartData = {
             labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
             datasets: [
