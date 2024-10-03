@@ -46,16 +46,16 @@ export class ChartsDemoComponent implements OnInit, OnDestroy {
         const surfaceBorder = documentStyle.getPropertyValue('--surface-border');
         
         this.barData = {
-            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+            labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio'],
             datasets: [
                 {
-                    label: 'My First dataset',
+                    label: 'Mi Primer dataset',
                     backgroundColor: documentStyle.getPropertyValue('--primary-500'),
                     borderColor: documentStyle.getPropertyValue('--primary-500'),
                     data: [65, 59, 80, 81, 56, 55, 40]
                 },
                 {
-                    label: 'My Second dataset',
+                    label: 'Mi Segundo dataset',
                     backgroundColor: documentStyle.getPropertyValue('--primary-200'),
                     borderColor: documentStyle.getPropertyValue('--primary-200'),
                     data: [28, 8, 65, 80, 65, 8, 28]
@@ -126,7 +126,7 @@ export class ChartsDemoComponent implements OnInit, OnDestroy {
         };
 
         this.lineData = {
-            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+            labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio'],
             datasets: [
                 {
                     label: 'Primero Dataset',
