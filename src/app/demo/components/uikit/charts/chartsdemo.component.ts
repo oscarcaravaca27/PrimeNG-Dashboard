@@ -129,7 +129,7 @@ export class ChartsDemoComponent implements OnInit, OnDestroy {
             labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
             datasets: [
                 {
-                    label: 'First Dataset',
+                    label: 'Primero Dataset',
                     data: [65, 59, 80, 81, 56, 55, 40],
                     fill: false,
                     backgroundColor: documentStyle.getPropertyValue('--primary-500'),
@@ -137,7 +137,7 @@ export class ChartsDemoComponent implements OnInit, OnDestroy {
                     tension: .4
                 },
                 {
-                    label: 'Second Dataset',
+                    label: 'Segundo Dataset',
                     data: [28, 48, 40, 19, 86, 27, 90],
                     fill: false,
                     backgroundColor: documentStyle.getPropertyValue('--primary-200'),
@@ -146,7 +146,7 @@ export class ChartsDemoComponent implements OnInit, OnDestroy {
                 },
                 {
                     label: 'Tercer Dataset',
-                    data: [0, 35, 10, 90, 10, 35, 0],
+                    data: [10, 25, 10, 30, 20, 35, 70],
                     fill: false,
                     backgroundColor: documentStyle.getPropertyValue('--green-500'),
                     borderColor: documentStyle.getPropertyValue('--green-500'),
@@ -191,21 +191,24 @@ export class ChartsDemoComponent implements OnInit, OnDestroy {
                     11,
                     16,
                     7,
-                    3
+                    3,
+                    18
                 ],
                 backgroundColor: [
                     documentStyle.getPropertyValue('--indigo-500'),
                     documentStyle.getPropertyValue('--purple-500'),
                     documentStyle.getPropertyValue('--teal-500'),
-                    documentStyle.getPropertyValue('--orange-500')
+                    documentStyle.getPropertyValue('--orange-500'),
+                    documentStyle.getPropertyValue('--blue-500')
                 ],
                 label: 'My dataset'
             }],
             labels: [
                 'Indigo',
-                'Purple',
+                'Purpura',
                 'Teal',
-                'Orange'
+                'Naranja',
+                'Azul'
             ]
         };
 
@@ -227,10 +230,10 @@ export class ChartsDemoComponent implements OnInit, OnDestroy {
         };
 
         this.radarData = {
-            labels: ['Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling', 'Running'],
+            labels: ['Comiendo', 'Bebiendo', 'Durmiendo', 'Diseñando', 'Coding', 'Ciclismo', 'Corriendo'],
             datasets: [
                 {
-                    label: 'My First dataset',
+                    label: 'Mi Primer dataset',
                     borderColor: documentStyle.getPropertyValue('--indigo-400'),
                     pointBackgroundColor: documentStyle.getPropertyValue('--indigo-400'),
                     pointBorderColor: documentStyle.getPropertyValue('--indigo-400'),
@@ -239,7 +242,7 @@ export class ChartsDemoComponent implements OnInit, OnDestroy {
                     data: [65, 59, 90, 81, 56, 55, 40]
                 },
                 {
-                    label: 'My Second dataset',
+                    label: 'Mi Segundo dataset',
                     borderColor: documentStyle.getPropertyValue('--purple-400'),
                     pointBackgroundColor: documentStyle.getPropertyValue('--purple-400'),
                     pointBorderColor: documentStyle.getPropertyValue('--purple-400'),
