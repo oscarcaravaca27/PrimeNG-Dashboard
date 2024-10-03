@@ -58,7 +58,7 @@ export class ChartsDemoComponent implements OnInit, OnDestroy {
                     label: 'My Second dataset',
                     backgroundColor: documentStyle.getPropertyValue('--primary-200'),
                     borderColor: documentStyle.getPropertyValue('--primary-200'),
-                    data: [28, 48, 40, 19, 86, 27, 90]
+                    data: [28, 8, 65, 80, 65, 8, 28]
                 }
             ]
         };
@@ -146,7 +146,7 @@ export class ChartsDemoComponent implements OnInit, OnDestroy {
                 },
                 {
                     label: 'Tercer Dataset',
-                    data: [2, 40, 20, 19, 86, 27, 90],
+                    data: [0, 30, 40, 80, 40, 30, 0],
                     fill: false,
                     backgroundColor: documentStyle.getPropertyValue('--green-500'),
                     borderColor: documentStyle.getPropertyValue('--green-500'),
