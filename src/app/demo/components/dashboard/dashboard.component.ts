@@ -20,6 +20,10 @@ export class DashboardComponent implements OnInit, OnDestroy {
 
     subscription!: Subscription;
 
+    lineData: any;
+
+    lineOptions: any;
+
     constructor(private productService: ProductService, public layoutService: LayoutService) {
         this.subscription = this.layoutService.configUpdate$.subscribe(() => {
             this.initChart();
@@ -91,6 +95,65 @@ export class DashboardComponent implements OnInit, OnDestroy {
                         drawBorder: false
                     }
                 }
+            }
+        };
+        this.lineData = {
+            labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio'],
+            datasets: [
+                {
+                    label: 'Primero Dataset',
+                    data: [65, 59, 80, 81, 56, 55, 40],
+                    fill: false,
+                    backgroundColor: documentStyle.getPropertyValue('--primary-500'),
+                    borderColor: documentStyle.getPropertyValue('--primary-500'),
+                    tension: .4
+                },
+                {
+                    label: 'Segundo Dataset',
+                    data: [28, 48, 40, 19, 86, 27, 90],
+                    fill: false,
+                    backgroundColor: documentStyle.getPropertyValue('--primary-200'),
+                    borderColor: documentStyle.getPropertyValue('--primary-200'),
+                    tension: .4
+                },
+                {
+                    label: 'Tercer Dataset',
+                    data: [10, 25, 10, 30, 20, 35, 70],
+                    fill: false,
+                    backgroundColor: documentStyle.getPropertyValue('--green-500'),
+                    borderColor: documentStyle.getPropertyValue('--green-500'),
+                    tension: .4
+                }
+            ]
+        };
+
+        this.lineOptions = {
+            plugins: {
+                legend: {
+                    labels: {
+                        fontColor: textColor
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    ticks: {
+                        color: textColorSecondary
+                    },
+                    grid: {
+                        color: surfaceBorder,
+                        drawBorder: false
+                    }
+                },
+                y: {
+                    ticks: {
+                        color: textColorSecondary
+                    },
+                    grid: {
+                        color: surfaceBorder,
+                        drawBorder: false
+                    }
+                },
             }
         };
     }
