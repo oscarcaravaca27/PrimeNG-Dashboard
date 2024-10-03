@@ -143,6 +143,14 @@ export class ChartsDemoComponent implements OnInit, OnDestroy {
                     backgroundColor: documentStyle.getPropertyValue('--primary-200'),
                     borderColor: documentStyle.getPropertyValue('--primary-200'),
                     tension: .4
+                },
+                {
+                    label: 'Tercer Dataset',
+                    data: [2, 40, 20, 19, 86, 27, 90],
+                    fill: false,
+                    backgroundColor: documentStyle.getPropertyValue('--green-500'),
+                    borderColor: documentStyle.getPropertyValue('--green-500'),
+                    tension: .4
                 }
             ]
         };
