@@ -146,7 +146,7 @@ export class ChartsDemoComponent implements OnInit, OnDestroy {
                 },
                 {
                     label: 'Tercer Dataset',
-                    data: [0, 30, 40, 80, 40, 30, 0],
+                    data: [0, 35, 10, 90, 10, 35, 0],
                     fill: false,
                     backgroundColor: documentStyle.getPropertyValue('--green-500'),
                     borderColor: documentStyle.getPropertyValue('--green-500'),
