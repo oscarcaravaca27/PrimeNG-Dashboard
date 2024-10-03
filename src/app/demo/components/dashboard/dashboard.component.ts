@@ -51,16 +51,16 @@ export class DashboardComponent implements OnInit, OnDestroy {
         const surfaceBorder = documentStyle.getPropertyValue('--surface-border');
 
         this.radarData = {
-            labels: ['Comiendo', 'Bebiendo', 'Durmiendo', 'Diseñando', 'Coding', 'Ciclismo', 'Corriendo'],
+            labels: ['Comiendo', 'Bebiendo', 'Durmiendo', 'Diseñando', 'Coding', 'Ciclismo', 'Corriendo', 'Frustación'],
             datasets: [
                 {
-                    label: 'Mi Primer dataset',
+                    label: 'Yo',
                     borderColor: documentStyle.getPropertyValue('--indigo-400'),
                     pointBackgroundColor: documentStyle.getPropertyValue('--indigo-400'),
                     pointBorderColor: documentStyle.getPropertyValue('--indigo-400'),
                     pointHoverBackgroundColor: textColor,
                     pointHoverBorderColor: documentStyle.getPropertyValue('--indigo-400'),
-                    data: [65, 59, 90, 81, 56, 55, 40]
+                    data: [65, 59, 90, 81, 56, 55, 40, 9000]
                 },
                 {
                     label: 'Mi Segundo dataset',
@@ -69,7 +69,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
                     pointBorderColor: documentStyle.getPropertyValue('--purple-400'),
                     pointHoverBackgroundColor: textColor,
                     pointHoverBorderColor: documentStyle.getPropertyValue('--purple-400'),
-                    data: [28, 48, 40, 19, 96, 27, 100]
+                    data: [28, 48, 40, 19, 96, 27, 100, 0]
                 }
             ]
         };
@@ -90,7 +90,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
                 }
             }
         };
-        
+
         this.chartData = {
             labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
             datasets: [
